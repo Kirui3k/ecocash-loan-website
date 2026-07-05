@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Loan System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Admin Login</h2>
+
+    <input type="password" id="pin" placeholder="Enter PIN">
+
+    <button onclick="checkPIN()">Login</button>
+
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <script>
+    function checkPIN() {
+      const pin = document.getElementById("pin").value;
+
+      // 🔐 Your PIN (change this)
+      const correctPIN = "1234";
+
+      if (pin === correctPIN) {
+        // redirect to main loan page
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").innerText = "Wrong PIN. Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
